@@ -2,7 +2,7 @@ class GiftsController < ApplicationController
   def index
     @gifts = Gift.all
   end
-  
+
   def new
     @gift = Gift.new
   end
@@ -18,6 +18,10 @@ class GiftsController < ApplicationController
       flash[:warning] = @gift.errors.full_messages.join(", ")
       render :new
     end
+  end
+
+  def show
+    @gift = Gift.find(params[:id])
   end
 
   private
