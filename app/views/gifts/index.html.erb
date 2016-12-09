@@ -1,7 +1,9 @@
 <h1>All Gifts</h1>
 
 <% @gifts.each do |gift| %>
-<%= gift.name %>
+<div class="col-md-6">
+<%=link_to gift.name, gift_path(gift.id) %>
 <%= gift.description %>
 <%= image_tag gift.image_url %>
+</div>
 <% end %>
