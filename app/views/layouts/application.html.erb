@@ -3,12 +3,69 @@
   <head>
     <title>Regifting</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <style>
+    body {
+      background: url(http://www.thewhy.com/wp-content/uploads/2014/11/Bad-Gift.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .container {
+      margin-top: 200px;
+    }
+
+    h1 {
+      color: #fff;
+    }
+
+    .btn-main {
+      background-color: red;
+      color: white;
+      font-size: 40px;
+      border: 4px solid white;
+      border-radius: 0;
+      padding: 10px 20px 10px 20px;
+    }
+
+    .btn-main:hover {
+      color: black;
+      border: 4px solid black;
+    }
+
+    .navbar {
+      min-height: 60px;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      padding-right: 20px;
+    }
+
+    .footer {
+      background-color: #fff;
+      min-height: 100px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer p {
+      text-align: center;
+    }
+  </style>
   </head>
 
   <body>
     <%= yield %>
+    <div class="footer">
+      <p>made by the Drummer Cakes</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
   </body>
 </html>
