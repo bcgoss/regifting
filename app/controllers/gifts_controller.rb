@@ -10,12 +10,14 @@ class GiftsController < ApplicationController
   def create
     @gift = Gift.new(gift_params)
     @gift.user_id = current_user.id if current_user
+    @gift.user_id = User.first unless current_user
     if @gift.save
       flash[:success] = "Gift was created."
+      redirect_to gifts_path
     else
       flash[:warning] = @gift.errors.full_messages.join(", ")
+      render :new
     end
-    redirect_to gifts_path
   end
 
   private
